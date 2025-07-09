@@ -263,7 +263,7 @@ impl GraphicsContext {
                     max_storage_buffer_binding_size: INSTANCE_BUFFER_SIZE,
                     max_texture_dimension_1d: 8192,
                     max_texture_dimension_2d: 8192,
-                    ..wgpu::Limits::downlevel_webgl2_defaults()
+                    ..wgpu::Limits::downlevel_defaults()
                 },
                 ..wgpu::DeviceDescriptor::default()
             }))?;
