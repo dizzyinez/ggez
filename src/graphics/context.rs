@@ -263,8 +263,10 @@ impl GraphicsContext {
                     max_storage_buffer_binding_size: INSTANCE_BUFFER_SIZE,
                     max_texture_dimension_1d: 8192,
                     max_texture_dimension_2d: 8192,
+                    max_binding_array_elements_per_shader_stage: 32,
                     ..wgpu::Limits::downlevel_defaults()
                 },
+                required_features: wgpu::Features::SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | wgpu::Features::TEXTURE_BINDING_ARRAY,
                 ..wgpu::DeviceDescriptor::default()
             }))?;
 
